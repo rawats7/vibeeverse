@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibeVerse</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="splash">
+    <h1>𝑉𝒾𝒷𝑒𝒱𝑒𝓇𝓈𝑒 ♫</h1>
+</div>
+
+<div class="main">
+
+<div class="header">
+    <h1> 𝑉𝒾𝒷𝑒𝒱𝑒𝓇𝓈𝑒  ♫</h1>
+</div>
+
+<div class="profile">
+    <div class="profile-row">संगीतं नादस्य सौन्दर्यम्।</div>
+    <div class="profile-row">Love • Beats • Soul</div>
+    <div class="profile-row">Echo of Emotions</div>
+</div>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search song or artist...">
+</div>
+
+<div id="notFoundMessage" style="display:none;">
+  <div class="not-found-card">
+    <h3>🎵 Song not found in VibeVerse</h3>
+    <p>Whisper its name to us — we’ll make it echo here within 30 minutes.</p>
+    <a href="https://www.instagram.com/direct/new/?username=raj_rawat.012" target="_blank" class="dm-button">💌 DM Us</a>
+  </div>
+</div>
+
+<div id="playlist"></div>
+
+</div>
+
+<div class="mini-player" id="miniPlayer" onclick="openFullPlayer()">
+    <img id="miniCover" src="">
+    <div class="mini-info">
+        <div id="miniTitle"></div>
+        <div id="miniArtist"></div>
+    </div>
+    <button onclick="togglePlay();event.stopPropagation();">▶</button>
+</div>
+
+<div class="player">
+    <div class="player-top">
+        <img id="cover" src="" alt="cover">
+        <div class="player-info">
+            <div id="title"></div>
+            <div id="artist" style="opacity:0.7;"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="controls">
+     <div id="loader" style="display:none;" class="loader"></div>
+    <button onclick="prevSong()">⏮</button>
+    <button id="playPauseBtn" onclick="togglePlay()">▶</button>
+    <button onclick="nextSong()">⏭</button>
+</div>
+    </div>
+
+    <div class="progress" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="time" id="time">0:00 / 0:00</div>
+    <input type="range" min="0" max="1" step="0.01" class="volume" id="volume">
+</div>
+
+
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
